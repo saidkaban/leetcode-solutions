@@ -3,7 +3,6 @@ class Solution:
         def list_same(l): 
             ele = l[0] 
             chk = True
-
             # Comparing each element with first item  
             for item in l: 
                 if ele != item: 
