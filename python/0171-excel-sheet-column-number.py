@@ -7,3 +7,4 @@ class Solution:
         for index, char in enumerate(columnTitle):
             s = s + (26 ** index) * (alphabet.index(char) + 1)
         return s
+

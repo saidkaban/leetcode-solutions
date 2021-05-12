@@ -1,11 +1,11 @@
-var generate = function(numRows) {
+var getRow = function(rowIndex) {
     const pascal = [[1], [1, 1]];
-    if (numRows == 1) {
-        return [pascal[0]];
-    } else if (numRows == 2) {
-        return pascal;
+    if (rowIndex == 0) {
+        return pascal[0];
+    } else if (rowIndex == 1) {
+        return pascal[1];
     }
-    for (let i = 2; i < numRows; i++) {
+    for (let i = 2; i <= rowIndex; i++) {
         let prevStep = [...pascal[i - 1]];
         prevStep.unshift(0);
         prevStep.push(0);
@@ -15,6 +15,5 @@ var generate = function(numRows) {
         }
         pascal.push(curStep);
     }
-    return pascal;
+    return pascal[rowIndex];
 };
-console.log(generate(5));
